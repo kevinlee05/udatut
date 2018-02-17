@@ -9,6 +9,6 @@ start_link = page.find('<a href=')
 start_quote = page.find('\"',start_link)
 start_url = start_quote+1
 end_quote = page.find('\"', start_quote+1)
-
 url = page[start_url:end_quote]
+
 print(url)
