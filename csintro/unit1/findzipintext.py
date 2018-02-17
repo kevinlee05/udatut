@@ -20,10 +20,10 @@ text2 = 'all zip files are compressed'
 
 # ENTER CODE BELOW HERE
 
-def findsecondstringin(string, text):
-    findfirst = text.find(string)
-    startfindsecond = findfirst + len(string)
-    findsecond = text.find(string, startfindsecond)
+def find_second(target, search):
+    findfirst = search.find(target)
+    startfindsecond = findfirst + len(target)
+    findsecond = search.find(target, startfindsecond)
     return findsecond
 
 
@@ -31,10 +31,15 @@ def findsecondstringin(string, text):
 
 import unittest
 
+danton = "De l'audace, encore de l'audace, toujours de l'audace"
+twister = "she sells seashells by the seashore"
+
 class FindStringTest(unittest.TestCase):
     def test(self):
-        self.assertEqual(findsecondstringin('zip', text), 18)
-        self.assertEqual(findsecondstringin('zip', text2), -1)
+        self.assertEqual(find_second('zip', text), 18)
+        self.assertEqual(find_second('zip', text2), -1)
+        self.assertEqual(find_second('audace', danton), 25)
+        self.assertEqual(find_second('she', twister), 13)
 
 if __name__ == '__main__':
     unittest.main()
