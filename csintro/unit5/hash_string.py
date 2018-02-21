@@ -10,10 +10,6 @@ def hash_string(keyword,buckets):
         sum += ord(chr)
     return sum % buckets
 
-
-
-
-
 print hash_string('a',12)
 #>>> 1
 
