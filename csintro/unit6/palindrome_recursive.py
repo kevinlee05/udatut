@@ -12,9 +12,17 @@ def is_palindrome(s):
         return is_palindrome(s[1:-1])
     return False
 
+def iter_palindrome(s):
+    for i in range(0, int(len(s)/2)):
+        if s[i] != s[-(i +1)]:
+            return False
+    return True
+
 
 assert is_palindrome('') == True
 assert is_palindrome('abab') == False
+assert is_palindrome('abab') == iter_palindrome('abab')
 assert is_palindrome('andrea') == False
+assert is_palindrome('andrea') == iter_palindrome('andrea')
 assert is_palindrome('abba') == True
 assert is_palindrome('abaaba') == True
