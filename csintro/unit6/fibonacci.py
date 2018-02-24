@@ -41,13 +41,13 @@ def fibonacci3(n):
     return current
 
 #calculate when mass of rabbits will exceed the mass of the earth
-mass_of_earth = 5.972 * 10**24 $ kilograms
+mass_of_earth = 5.972 * 10**24 # kilograms
 mass_of_rabbit = 2 # 2 kilograms per rabbit
 
 n = 1
 while fibonacci3(n) * mass_of_rabbit < mass_of_earth:
     n = n + 1
-print n, fibonacci3(n)
+print(n, fibonacci3(n))
 
 #print fibonacci2(0)
 #>>> 0
