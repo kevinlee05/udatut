@@ -5,6 +5,9 @@ class Node(object):
         self.right = None
 
 class BST(object):
+    """
+    BST Implementation with in_order traversal algorithm
+    """
     def __init__(self, root):
         self.root = Node(root)
 
@@ -75,4 +78,5 @@ print(tree.print_tree())
 print(tree.search(4))
 # Should be False
 print(tree.search(6))
+# Should be True
 print(tree.search(15))
