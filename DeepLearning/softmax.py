@@ -18,3 +18,7 @@ scores = np.vstack([x, np.ones_like(x), 0.2 * np.ones_like(x)])
 
 plt.plot(x, softmax(scores).T, linewidth=2)
 plt.show()
+
+scores = np.array([3.0, 1.0, 0.2])
+print(softmax(scores*10)) 
+print(softmax(scores/10)) #probabilities get closer to uniform distribution
